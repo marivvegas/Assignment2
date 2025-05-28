@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time of Day Background</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 20%;
+      transition: background-color 0.5s ease;
+    }
+  </style>
+  <script>
+    function setBackgroundColor() {
+      const hour = new Date().getHours();
+      let bgColor;
+
+      if (hour >= 6 && hour < 12) {
+        bgColor = '#FFD700'; // Morning (Yellow Gold)
+      } else if (hour >= 12 && hour < 18) {
+        bgColor = '#87CEEB'; // Afternoon (Sky Blue)
+      } else if (hour >= 18 && hour < 21) {
+        bgColor = '#FF8C00'; // Evening (Dark Orange)
+      } else {
+        bgColor = '#2F4F4F'; // Night (Dark Gray)
+      }
+
+      document.body.style.backgroundColor = bgColor;
+    }
+
+    window.onload = setBackgroundColor;
+  </script>
+</head>
+<body>
+  <h1>Maria Vegas</h1>
+  <p>Course: CS4813  Web Applications Programming</p>
+  <p>Major: Computer Science</p>
+  <h2>Welcome to my dynamic webpage!</h2>
+</body>
+</html>
+
